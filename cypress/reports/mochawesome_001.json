@@ -1,0 +1,87 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-25T00:37:32.587Z",
+    "end": "2024-07-25T00:37:32.804Z",
+    "duration": 217,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "20f072e4-7333-4acb-9f8c-40d94fa9e885",
+      "title": "",
+      "fullFile": "cypress\\e2e\\privacy.cy.js",
+      "file": "cypress\\e2e\\privacy.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "testa a página da política de privacidade de forma independente",
+          "fullTitle": "testa a página da política de privacidade de forma independente",
+          "timedOut": null,
+          "duration": 116,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('./src/privacy.html');",
+          "err": {},
+          "uuid": "c9863b72-f366-4768-ad80-03d50924eab4",
+          "parentUUID": "20f072e4-7333-4acb-9f8c-40d94fa9e885",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "c9863b72-f366-4768-ad80-03d50924eab4"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 116,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
