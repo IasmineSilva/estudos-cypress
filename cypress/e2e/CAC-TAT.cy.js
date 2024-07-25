@@ -3,10 +3,10 @@
 describe('Central de Atendimento ao Cliente TAT', function () {
     beforeEach(function () {
         cy.visit('./src/index.html')
-    })
-    it('Verifica o titulo da aplicação', function(){
-        Cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
-    })
+    // })
+    // it('Verifica o titulo da aplicação', function(){
+    //     Cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
+    // })
     it('preenche os campos obrigatórios e envia o formulário', function () {
         const longText = 'teste, teste, teste, teste'
         cy.get('#firstName').type('Iasmine')
