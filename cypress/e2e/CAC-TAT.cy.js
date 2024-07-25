@@ -9,6 +9,9 @@ describe('Central de Atendimento ao Cliente TAT', function () {
     // })
     it('preenche os campos obrigatórios e envia o formulário', function () {
         const longText = 'teste, teste, teste, teste'
+
+        cy.clock()
+
         cy.get('#firstName').type('Iasmine')
         cy.get('#lastName').type('Silva')
         cy.get('#email').type('teste@gmail.com')
@@ -16,6 +19,7 @@ describe('Central de Atendimento ao Cliente TAT', function () {
         cy.contains('button', 'Enviar').click()
 
         cy.get('.success').should('be.visible')
+        cy.get('.success').should('not.be.visible')
 
 
     })
