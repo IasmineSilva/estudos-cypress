@@ -3,5 +3,10 @@ export const ELEMENTS = {
 }
 
 export const FILTROS = {
-    
+   filtroToDo: "ul[class='filters'] li a" 
+}
+
+export const ITENS = {
+    buttonConcluirItem: "input[class='toggle']",
+    listaItens: "ul[class='todo-list'] div"
 }
