@@ -10,6 +10,12 @@ class telaInicial {
         cy.get(elem.inputToDo).type(dado).type('{enter}')
     }
 
+    validarInput(texto) {
+        cy.get(elem.inputToDo)
+        .should('have.attr', 'placeholder')
+        .and('include', texto)
+    }
+
     concluirItem() {
         cy.get(concluirItem.buttonConcluirItem)
         .last()

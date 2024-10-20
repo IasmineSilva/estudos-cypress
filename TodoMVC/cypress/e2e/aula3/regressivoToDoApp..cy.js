@@ -3,10 +3,12 @@ import telaInicialPageObjects from "../../support/pageObjects/tela-inicial.pageO
 describe ('Regressivo ToDo App',() => {
 
     context('Validar a tela inicial', ()=> {
-        beforEach(() => {
+        beforeEach(() => {
             cy.visit('/')
         })
-        
+        it('Validar área label de input de dados', () => {
+           telaInicialPageObjects.validarInput("What needs to be done?") 
+        })
     })
 
     context('Validar a adição de itens', ()=> {
