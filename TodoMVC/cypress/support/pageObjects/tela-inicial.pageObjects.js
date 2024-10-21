@@ -36,6 +36,16 @@ class telaInicial {
         .click()
     }
 
+    validarContador(numero) {
+        cy.get(filtroItem.contador)
+        .find('Strong')
+        .contains(numero)
+    }
+
+    validarSizeToDo(numero) {
+        cy.get(concluirItem.validarListaItens)
+    }
+
 }
 
 export default new telaInicial();

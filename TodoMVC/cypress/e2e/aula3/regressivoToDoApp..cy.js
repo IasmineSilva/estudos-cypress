@@ -1,4 +1,4 @@
-import telaInicialPageObjects from "../../support/pageObjects/tela-inicial.pageObjects";
+import telaInicialPageObjects from "../../support/pageObjects/tela-inicial.pageObjects"
 
 describe ('Regressivo ToDo App',() => {
 
@@ -12,7 +12,22 @@ describe ('Regressivo ToDo App',() => {
     })
 
     context('Validar a adição de itens', ()=> {
+        beforeEach(() => {
+            cy.visit('/')
+        })
         
+    it('Adicionar mais de um item na lista', () => {
+
+        var todoItens = ["Maçã", "Banana", "Cenoura"]
+
+        todoItens.forEach(function(item, indice, array ){
+        telaInicial.inputText(item)  
+
+        })
+        
+        telaInicial.validarContador(3)
+    })
+    
     })
 
     context('Validar conclusão de itens', ()=> {
