@@ -1,0 +1,17 @@
+{
+  "name": "cypress-basico",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/IasmineSilva/cypress-basico",
+  "author": "iasmine silva <iasmine948@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "cypress-basico": "file:",
+    "D": "file:",
+    "Demo-Qa": "file:"
+  },
+  "devDependencies": {
+    "cypress": "^13.14.2"
+  }
+}
