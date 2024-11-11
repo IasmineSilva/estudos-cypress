@@ -1,39 +1,53 @@
+const elem = require('../elements/tela-inicial.elements').ELEMENTS
+const concluirItem = require('../elements/tela-inicial.elements').ITENS
+const filtroItem = require('../elements/tela-inicial.elements').FILTROS
 
-const elem = require('../elements/tela-Inicial.elements').ELEMENTS
-const concluirItem = require('../elements/tela-Inicial.elements').ITENS
-const filtroItem = require('../elements/tela-Inicial.elements').FILTROS
-
-class telaInicial {
+class  telaInicial{
 
     inputText(dado){
-        console.log(dado);  // Verifica o valor de "dado"
         cy.get(elem.inputToDo).type(dado).type('{enter}')
     }
 
-    validarInput(texto) {
-        cy.get(elem.inputToDo)
-        .should('have.attr', 'placeholder')
-        .and('include', texto)
-    }
-
-    concluirItem() {
+    concluirItem(){
         cy.get(concluirItem.buttonConcluirItem)
         .last()
         .click()
     }
 
-    filtrarItem(menu) {
+    filtrarItem(menu){
         cy.get(filtroItem.filtroToDo)
         .contains(menu)
         .and('be.visible')
+        .click()
     }
 
-    deletarItem() {
+    deletarItem(){
         cy.get(concluirItem.listaItens)
         .first()
         .find('button')
-        .invoke('show')     // invoca o elemento que aparece apenas ao passar o mouse
+        .invoke('show')
         .click()
+    }
+
+    validarInput(texto){
+        cy.get(elem.inputToDo)
+        .should('have.attr', 'placeholder')
+        .and('include', texto)
+    }
+
+    validarContador(numero){
+        /**
+         * site atualizou e agora não é mais necessário dar um find no elemento
+         */
+        cy.get(filtroItem.contador)
+        // .find('strong')
+        // .should('have.text', numero)
+        .should('contains.text', numero)
+    }
+
+    validarSizeToDo(numero){
+        cy.get(concluirItem.validarListaItens)
+        .should('have.length', numero)
     }
 
 }
