@@ -92,7 +92,7 @@ estudos-cypress/
 - `gui/` - Testes de interface gráfica
 - `support/` - Custom commands organizados
 
-### 5. 🎯 **DemoQA**
+### 5 🎯 **DemoQA**
 **Localização:** `DemoQA/`
 
 **Foco:** Práticas com elementos específicos
