@@ -125,7 +125,6 @@ estudos-cypress/
 - **Cypress** v13.12.0 - Framework de automação
 - **Node.js** v20.13.1 - Runtime JavaScript
 - **npm** - Gerenciador de pacotes
-- **Git** - Controle de versão
 
 ### Conhecimentos Aplicados
 - **JavaScript ES6+** - Linguagem de programação
