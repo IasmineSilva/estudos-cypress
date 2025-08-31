@@ -229,7 +229,7 @@ describe('Formulário de Login', () => {
 describe('API de Usuários', () => {
   it('deve criar um novo usuário', () => {
     cy.request('POST', '/api/users', {
-      name: 'João Silva',
+      name: 'Junior Silva',
       email: 'joao@teste.com'
     }).then((response) => {
       expect(response.status).to.eq(201)
