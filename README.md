@@ -1,4 +1,4 @@
-# 🚀 Estudos Cypress - Repositório de Aprendizado
+# 🚀 Estudos Cypress - Repositório de Aprendizado.
 
 [![Cypress](https://img.shields.io/badge/Cypress-13.12.0-green.svg)](https://cypress.io)
 [![Node.js](https://img.shields.io/badge/Node.js-v20.13.1-blue.svg)](https://nodejs.org)
