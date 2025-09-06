@@ -261,8 +261,8 @@ describe('API de Usuários', () => {
 ### Curto Prazo (1-3 meses)
 - [x] Dominar comandos básicos do Cypress
 - [x] Implementar testes de formulários
-- [ ] Configurar CI/CD básico
-- [ ] Criar custom commands avançados
+- [x] Configurar CI/CD básico
+- [x] Criar custom commands avançados
 
 ### Médio Prazo (3-6 meses)
 - [ ] Integrar com Cypress Cloud
