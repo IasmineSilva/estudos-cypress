@@ -265,8 +265,8 @@ describe('API de Usuários', () => {
 - [x] Criar custom commands avançados
 
 ### Médio Prazo (3-6 meses)
-- [ ] Integrar com Cypress Cloud
-- [ ] Implementar testes de API complexos
+- [x] Integrar com Cypress Cloud
+- [x] Implementar testes de API complexos
 - [ ] Criar framework de testes robusto
 - [ ] Otimizar performance dos testes
 
