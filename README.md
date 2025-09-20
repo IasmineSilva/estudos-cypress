@@ -313,4 +313,4 @@ Este projeto está licenciado sob a Licença MIT.
 
 *Desenvolvido com ❤️ para estudos de automação de testes com Cypress*
 
-*Última atualização: Dezembro 2024*
+*Última atualização: Setembro 2025*
