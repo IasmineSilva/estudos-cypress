@@ -1,22 +1,13 @@
-describe('Prática ruim de complexidade desnecessária', () => {
+describe('Unnecessary complexity bad practice', () => {
   beforeEach(() => {
     cy.visit('https://bit.ly/2XSuwCW')
-    cy.ativarAcordoAleatorio()
+    cy.randomlyTogglePurchaseAgreement()
   })
 
   Cypress._.times(5, () => {
-    it('verifica a caixa de seleção apenas se não estiver marcada', () => {
-      cy.get('body', { log: false }).then($body => {
-        if ($body.find('#agree:checked').length) {
-          cy.log('caixa de seleção estava marcada')
-          return
-        }
-        cy.log('caixa de seleção estava desmarcada')
-        $body.find('#agree').click()
-        return
-      })
-
-      cy.get('#agree', { log: false })
+    it('checks the checkbox and ensure it is checked', () => {
+      cy.get('#agree')
+        .check()
         .should('be.checked')
     })
   })
