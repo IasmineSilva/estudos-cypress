@@ -1,16 +1,15 @@
-describe('Prática ruim de espera desnecessária', () => {
+describe('Unnecessary waiting bad practice', () => {
   beforeEach(() => {
     cy.visit('./src/index.html')
   })
 
-  it('busca uma refeição digitando e clicando no botão de envio', () => {
+  it('searches for a meal by typing and clicking the submit button', () => {
     cy.get('[data-test-id="search-field"]').type('Ramen')
     cy.get('[data-test-id="search-button"]')
       .click()
       .blur()
-    cy.wait(10000)
 
-    cy.contains('h2', 'Ramen (sopa)')
+    cy.contains('h2', 'Ramen (sopa)', { timeout: 10000 })
       .should('be.visible')
   })
 })
