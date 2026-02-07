@@ -16,6 +16,8 @@
   "license": "MIT",
   "description": "Projeto do curso - Testes End-to-End com Cypress e Cucumber: Guia Definitivo - da Escola Talking About Testing",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
     "cypress": "^15.3.0"
   }
 }
