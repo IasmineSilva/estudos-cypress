@@ -1,19 +1,24 @@
-Cypress.Commands.add('buscar', termo => {
+Cypress.Commands.add('search', term => {
   cy.get('input[type="text"]')
     .should('be.visible')
     .clear()
-    .type(`${termo}{enter}`)
+    .type(`${term}{enter}`)
 })
 
-Cypress.Commands.add('verificarResultados', () => {
-  cy.get('.table-row').then(linhas => {
-    expect(linhas.length).to.be.at.least(1)
-  })
-})
-
-Cypress.Commands.add('ativarAcordoAleatorio', () => {
+Cypress.Commands.add('randomlyTogglePurchaseAgreement', () => {
   if (Math.random() > 0.5) {
     cy.get('#agree')
       .click()
   }
+})
+
+Cypress.Commands.add('updateDestination', data => {
+  cy.get('#destination_name')
+    .clear()
+    .type(data.name)
+  cy.get('#destination_description')
+    .clear()
+    .type(data.description)
+  cy.get('input[type="submit"]')
+    .click()
 })
