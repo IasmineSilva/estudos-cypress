@@ -1,21 +1,19 @@
 import { faker } from '@faker-js/faker'
 
-const atualizarDestino = require('../../objetos-de-página/atualizarDestino')
-
-describe('Prática ruim de padrão de página', () => {
+describe('Page Object bad practice', () => {
   const randomDestination = Math.floor(Math.random() * 15) + 1
 
   beforeEach(() => {
     cy.visit(`https://lit-chamber-61567.herokuapp.com/destinations/${randomDestination}/edit`)
   })
 
-  it('atualiza informações de destino', () => {
+  it('updates destination info', () => {
     const info = {
       name: faker.random.words(5),
       description: faker.random.words(5)
     }
 
-    atualizarDestino.atualizarInfo(info)
+    cy.updateDestination(info)
 
     cy.url()
       .should(
