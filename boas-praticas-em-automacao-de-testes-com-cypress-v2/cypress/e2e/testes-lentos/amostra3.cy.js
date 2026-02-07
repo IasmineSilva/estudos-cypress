@@ -1,9 +1,9 @@
-describe('Unnecessary waiting bad practice', () => {
+describe('Prática ruim de espera desnecessária', () => {
   beforeEach(() => {
     cy.visit('./src/index.html')
   })
 
-  it('searches for a meal by typing and clicking the submit button', () => {
+  it('busca uma refeição digitando e clicando no botão de envio', () => {
     cy.get('[data-test-id="search-field"]').type('Ramen')
     cy.get('[data-test-id="search-button"]')
       .click()

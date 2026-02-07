@@ -1,24 +1,24 @@
 import { faker } from '@faker-js/faker'
 
-describe('Flaky tests bad practice', () => {
+describe('Prática ruim de testes instáveis', () => {
   beforeEach(() => {
     cy.visit('https://wlsf82-hacker-stories.web.app')
 
-    cy.contains('p','Loading ...')
+    cy.contains('p', 'Carregando ...')
       .should('be.visible')
-    cy.contains('p','Loading ...')
+    cy.contains('p', 'Carregando ...')
       .should('not.exist')
   })
 
   Cypress._.times(10, () => {
-    it('shows a max of 5 buttons for the last searched terms', () => {
+    it('mostra um máximo de 5 botões para os últimos termos pesquisados', () => {
       Cypress._.times(6, () => {
-        cy.search(faker.random.word())
+        cy.buscar(faker.random.word())
       })
 
-      cy.contains('p','Loading ...')
+      cy.contains('p', 'Carregando ...')
         .should('be.visible')
-      cy.contains('p','Loading ...')
+      cy.contains('p', 'Carregando ...')
         .should('not.exist')
 
       cy.get('.last-searches button')

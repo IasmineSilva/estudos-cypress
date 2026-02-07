@@ -1,4 +1,4 @@
-describe('Code duplication bad practice - repetitive steps', () => {
+describe('Prática ruim de duplicação de código - passos repetitivos', () => {
   beforeEach(() => {
     cy.intercept(
       'GET',
@@ -15,9 +15,9 @@ describe('Code duplication bad practice - repetitive steps', () => {
       .clear()
   })
 
-  it('searches by typing and hitting enter', () => {
+  it('busca digitando e pressionando enter', () => {
     cy.get('@searchField')
-      .type('frontend testing{enter}')
+      .type('teste de frontend{enter}')
 
     cy.wait('@getStories')
 
@@ -25,9 +25,9 @@ describe('Code duplication bad practice - repetitive steps', () => {
       .should('have.length', 100)
   })
 
-  it('searches by typing and pressing the search button', () => {
+  it('busca digitando e pressionando o botão de busca', () => {
     cy.get('@searchField')
-      .type('frontend testing')
+      .type('teste de frontend')
 
     cy.contains('button', 'Search')
       .should('be.visible')

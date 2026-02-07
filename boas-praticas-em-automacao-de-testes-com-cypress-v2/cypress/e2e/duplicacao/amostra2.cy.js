@@ -1,4 +1,4 @@
-describe('Code duplication bad practice - repetitive tests', () => {
+describe('Prática ruim de duplicação de código - testes repetitivos', () => {
   beforeEach(() => {
     cy.intercept(
       'GET',
@@ -16,8 +16,8 @@ describe('Code duplication bad practice - repetitive tests', () => {
   })
 
   context('Exercício extra 1', () => {
-    it('searches for "reactjs"', () => {
-      cy.search('reactjs')
+    it('busca por "reactjs"', () => {
+      cy.buscar('reactjs')
 
       cy.wait('@getStories')
 
@@ -25,8 +25,8 @@ describe('Code duplication bad practice - repetitive tests', () => {
         .should('have.length', 100)
     })
 
-    it('searches for "vuejs"', () => {
-      cy.search('vuejs')
+    it('busca por "vuejs"', () => {
+      cy.buscar('vuejs')
 
       cy.wait('@getStories')
 
@@ -39,8 +39,8 @@ describe('Code duplication bad practice - repetitive tests', () => {
     const termsToSearchFor = ['reactjs', 'vuejs', 'angularjs']
 
     termsToSearchFor.forEach(term => {
-      it(`searches for "${term}"`, () => {
-        cy.search(term)
+      it(`busca por "${term}"`, () => {
+        cy.buscar(term)
 
         cy.wait('@getStories')
 

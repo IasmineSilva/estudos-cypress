@@ -1,14 +1,14 @@
-const editDestination = {
-  updateInfo: data => {
+const atualizarDestino = {
+  atualizarInfo: dados => {
     cy.get('#destination_name')
       .clear()
-      .type(data.name)
+      .type(dados.name)
     cy.get('#destination_description')
       .clear()
-      .type(data.description)
+      .type(dados.description)
     cy.get('input[type="submit"]')
       .click()
   }
 }
 
-module.exports = editDestination
+module.exports = atualizarDestino

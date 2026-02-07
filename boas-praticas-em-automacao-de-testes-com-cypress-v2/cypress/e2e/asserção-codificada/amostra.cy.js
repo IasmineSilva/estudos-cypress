@@ -1,4 +1,4 @@
-describe('Hardcoded assertion bad practice', () => {
+describe('Prática ruim de asserção codificada', () => {
   beforeEach(() => {
     cy.intercept(
       'GET',
@@ -10,8 +10,8 @@ describe('Hardcoded assertion bad practice', () => {
     cy.wait('@getStories')
   })
 
-  it('searches', () => {
-    cy.search('cypress.io')
+  it('busca', () => {
+    cy.buscar('cypress.io')
     cy.wait('@getStories')
 
     cy.get('.table-row')

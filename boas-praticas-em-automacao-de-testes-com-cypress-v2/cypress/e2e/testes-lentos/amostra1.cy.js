@@ -1,4 +1,4 @@
-describe('Slow tests bad practice - use the API to test the frontend', () => {
+describe('Prática ruim de testes lentos - usar a API para testar o frontend', () => {
   beforeEach(() => {
     cy.intercept(
       'GET',
@@ -15,9 +15,9 @@ describe('Slow tests bad practice - use the API to test the frontend', () => {
       .clear()
   })
 
-  it('searches by typing and hitting enter', () => {
+  it('busca digitando e pressionando enter', () => {
     cy.get('@searchField')
-      .type('frontend testing{enter}')
+      .type('teste de frontend{enter}')
 
     cy.wait('@getStories')
 
