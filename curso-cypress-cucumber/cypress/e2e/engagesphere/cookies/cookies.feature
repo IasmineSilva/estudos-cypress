@@ -1,17 +1,17 @@
-Feature: Cookies Consent Banner
+Funcionalidade: Banner de Consentimento de Cookies
 
-  @engagesphere
-  Scenario: consents to the cookie's policies
-    Given I access the EngageSphare app without any cookies set
-    And I see the cookies consent banner
-    When I click the Accept button
-    Then the cookies banner is closed
-    And the cookieConsent cookie is set with the value accepted
+@engagesphere
+Cenário: aceita as políticas de cookies
+Dado que acesso o app EngageSphare sem nenhum cookie definido
+E vejo o banner de consentimento de cookies
+Quando clico no botão Aceitar
+Então o banner de cookies é fechado
+E o cookie cookieConsent é definido com o valor accepted
 
-  @engagesphere
-  Scenario: declines to the cookie's policies
-    Given I access the EngageSphare app without any cookies set
-    And I see the cookies consent banner
-    When I click the Decline button
-    Then the cookies banner is closed
-    And the cookieConsent cookie is set with the value declined
+@engagesphere
+Cenário: recusa as políticas de cookies
+Dado que acesso o app EngageSphare sem nenhum cookie definido
+E vejo o banner de consentimento de cookies
+Quando clico no botão Recusar
+Então o banner de cookies é fechado
+E o cookie cookieConsent é definido com o valor declined
