@@ -1,29 +1,29 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
-Given('I access the EngageSphare app without any cookies set', () => {
+Given('que acesso o app EngageSphare sem nenhum cookie definido', () => {
   cy.visit('https://engage-sphere.vercel.app/')
 })
 
-Given('I see the cookies consent banner', () => {
+Given('vejo o banner de consentimento de cookies', () => {
   cy.get('[class^="CookieConsent_banner__"]').should('be.visible')
 })
 
-When('I click the Accept button', () => {
+When('clico no botão Aceitar', () => {
   cy.contains('button', 'Accept').click()
 })
 
-When('I click the Decline button', () => {
+When('clico no botão Recusar', () => {
   cy.contains('button', 'Decline').click()
 })
 
-Then('the cookies banner is closed', () => {
+Then('o banner de cookies é fechado', () => {
   cy.get('[class^="CookieConsent_banner__"]').should('not.exist')
 })
 
-Then('the cookieConsent cookie is set with the value accepted', () => {
+Then('o cookie cookieConsent é definido com o valor accepted', () => {
   cy.getCookie('cookieConsent').should('have.property', 'value', 'accepted')
 })
 
-Then('the cookieConsent cookie is set with the value declined', () => {
+Then('o cookie cookieConsent é definido com o valor declined', () => {
   cy.getCookie('cookieConsent').should('have.property', 'value', 'declined')
 })
